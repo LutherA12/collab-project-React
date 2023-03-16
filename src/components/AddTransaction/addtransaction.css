@@ -1,0 +1,7 @@
+.addTransaction {
+  color: black;
+  font-size: var(--fontThirty);
+  background-color: steelblue;
+  max-width: fit-content;
+  border-radius: 10px;
+}

@@ -1,18 +1,18 @@
 import "./App.css";
 import {
-  Navbar,
-  Bodycontent,
-  Mediacontent,
-  Footercontent,
+  User,
+  CardOverview,
+  AddTransaction,
+  Transactions,
 } from "./components/componentExport.jsx";
 
 function App() {
   return (
     <div>
-      <Navbar />
-      <Bodycontent />
-      <Mediacontent />
-      <Footercontent />
+      <User />
+      <CardOverview />
+      <AddTransaction />
+      <Transactions />
     </div>
   );
 }

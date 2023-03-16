@@ -1,0 +1,14 @@
+.card {
+  color: black;
+  font-size: var(--fontThirty);
+  background: rgb(200, 120, 217);
+  background: linear-gradient(
+    90deg,
+    rgba(200, 120, 217, 1) 0%,
+    rgba(238, 121, 177, 1) 29%,
+    rgba(241, 160, 148, 1) 65%,
+    rgba(240, 151, 97, 1) 100%
+  );
+  max-width: fit-content;
+  border-radius: 10px;
+}

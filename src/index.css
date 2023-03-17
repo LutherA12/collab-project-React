@@ -1,3 +1,28 @@
 :root {
-  --fontThirty: 30px;
+  /* colors */
+  --color-background: #ede9f0;
+  --color-linear-card: linear-gradient(
+    135deg,
+    #c878d9,
+    #ee79b1,
+    #f1a094,
+    #f09761
+  );
+  --color-linear-button: linear-gradient(135deg, #fe8338, #f1a094);
+  --color-text: #7c7c7c;
+  --color-title: #1a1919;
+  --color-white: #fff;
+  --color-light: #f2f2f2;
+
+  /* font-sizes */
+  --fz-xsmall-mobile: 1rem;
+  --fz-small-mobile: 1.25rem;
+  --fz-medium-mobile: 1.5rem;
+  --fz-large-mobile: 2.5rem;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }

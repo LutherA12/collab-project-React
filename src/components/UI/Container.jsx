@@ -1,7 +1,8 @@
 import './container.css';
 
-function Container() {
-  return <div className="container"></div>;
+function Container({ className, children }) {
+  const classes = className ? `container ${className}` : 'container';
+  return <div className={classes}>{children}</div>;
 }
 
 export default Container;

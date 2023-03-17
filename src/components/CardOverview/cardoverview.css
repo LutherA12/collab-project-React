@@ -1,14 +1,79 @@
-.card {
-  color: black;
-  font-size: var(--fontThirty);
-  background: rgb(200, 120, 217);
-  background: linear-gradient(
-    90deg,
-    rgba(200, 120, 217, 1) 0%,
-    rgba(238, 121, 177, 1) 29%,
-    rgba(241, 160, 148, 1) 65%,
-    rgba(240, 151, 97, 1) 100%
-  );
-  max-width: fit-content;
-  border-radius: 10px;
+.card-overview {
+  color: var(--color-white);
+  background: var(--color-linear-card);
+  width: min(90%, 540px);
+  margin-inline: auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.125rem;
+  text-align: center;
+}
+
+.card-overview h2 {
+  font-weight: 400;
+  font-size: var(--fz-small-mobile);
+  margin-bottom: 0.5rem;
+}
+
+.card-overview p {
+  font-weight: 600;
+  font-size: var(--fz-medium-mobile);
+}
+
+/* Images */
+.card-overview__income__img,
+.card-overview__expenses__img {
+  display: none;
+}
+
+/* MEDIA min-width: 600px */
+@media screen and (min-width: 600px) {
+  .card-overview {
+    padding: 2.5rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2.5rem 1rem;
+  }
+
+  .card-overview > div:first-child {
+    width: 100%;
+  }
+
+  .card-overview > div:nth-child(2) {
+    text-align: left;
+    margin-right: auto;
+  }
+  .card-overview > div:last-child {
+    text-align: left;
+    margin-left: auto;
+  }
+
+  /* Images */
+  .card-overview__income__img,
+  .card-overview__expenses__img {
+    display: block;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Glassmorphism effect */
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .card-overview__income,
+  .card-overview__expenses {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
 }

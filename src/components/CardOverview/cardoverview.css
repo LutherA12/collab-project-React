@@ -1,7 +1,7 @@
 .card-overview {
   color: var(--color-white);
   background: var(--color-linear-card);
-  width: min(90%, 540px);
+  width: min(90%, 510px);
   margin-inline: auto;
   padding: 2rem;
   display: flex;
@@ -15,7 +15,6 @@
 .card-overview h2 {
   font-weight: 400;
   font-size: var(--fz-small-mobile);
-  margin-bottom: 0.5rem;
 }
 
 .card-overview p {
@@ -36,19 +35,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 2.5rem 1rem;
-  }
-
-  .card-overview > div:first-child {
-    width: 100%;
-  }
-
-  .card-overview > div:nth-child(2) {
-    text-align: left;
-    margin-right: auto;
-  }
-  .card-overview > div:last-child {
-    text-align: left;
-    margin-left: auto;
   }
 
   /* Images */
@@ -74,6 +60,6 @@
   .card-overview__expenses {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
   }
 }

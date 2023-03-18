@@ -5,13 +5,14 @@ import {
   AddTransaction,
   Transactions,
   Container,
+  Card,
 } from './components/componentExport.jsx';
 
 function App() {
   return (
     <Container>
       <User />
-      <main>
+      <main className="card">
         <CardOverview />
         <AddTransaction />
         <Transactions />

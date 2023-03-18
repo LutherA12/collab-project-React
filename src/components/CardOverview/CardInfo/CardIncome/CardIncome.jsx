@@ -10,7 +10,7 @@ function CardIncome() {
       <div className="card-overview__income--content">
         <h2>Income</h2>
         <p>
-          <span className="income">5.000,00</span>€
+          <span id="income">5.000,00</span>€
         </p>
       </div>
     </div>

@@ -1,13 +1,20 @@
-import { CardExpenses, CardIncome, CardTotalBal } from '../componentExport.jsx';
+import {
+  CardExpenses,
+  CardIncome,
+  CardTotalBal,
+  Card,
+} from '../componentExport.jsx';
 import './cardoverview.css';
 
 function CardOverview() {
   return (
-    <div className="card card-overview">
-      <CardTotalBal />
-      <CardIncome />
-      <CardExpenses />
-    </div>
+    <section className="transactions-overview">
+      <Card className="card-overview">
+        <CardTotalBal />
+        <CardIncome />
+        <CardExpenses />
+      </Card>
+    </section>
   );
 }
 

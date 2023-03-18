@@ -10,7 +10,7 @@ function CardExpenses() {
       <div className="card-overview__expenses--content">
         <h2>Expenses</h2>
         <p>
-          <span className="expenses">2.500,00</span>€
+          <span id="expenses">2.500,00</span>€
         </p>
       </div>
     </div>

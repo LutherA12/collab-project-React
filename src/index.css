@@ -12,7 +12,7 @@
   --color-text: #7c7c7c;
   --color-title: #1a1919;
   --color-white: #fff;
-  --color-light: #f2f2f2;
+  --color-light: #fbfbfb;
 
   /* font-sizes */
   --fz-xsmall-mobile: 1rem;
@@ -21,8 +21,19 @@
   --fz-large-mobile: 2.5rem;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
+  line-height: 1.5;
+  background-color: var(--color-background);
 }

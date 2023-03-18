@@ -1,0 +1,6 @@
+@media screen and (min-width: 600px) {
+  .card-overview > div:nth-child(2) {
+    text-align: left;
+    margin-right: auto;
+  }
+}

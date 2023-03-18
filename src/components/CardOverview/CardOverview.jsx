@@ -8,7 +8,7 @@ import './cardoverview.css';
 
 function CardOverview() {
   return (
-    <section className="transactions-overview">
+    <section className="section-card-overview">
       <Card className="card-overview">
         <CardTotalBal />
         <CardIncome />

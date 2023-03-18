@@ -1,4 +1,14 @@
 main {
   background-color: var(--color-light);
-  padding: 4rem 1rem;
+  padding: 2.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+@media screen and (min-width: 600px) {
+  main {
+    padding: 4rem 1rem;
+    gap: 4rem;
+  }
 }

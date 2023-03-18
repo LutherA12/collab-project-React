@@ -15,3 +15,9 @@ export { default as TransactionDiagramList } from './TransactionDiagram/Transact
 export { default as Button } from './UI/Button';
 export { default as Card } from './UI/Card';
 export { default as Container } from './UI/Container';
+
+export { default as TransactionFormAmount } from './AddTransaction/TransactionFormInputs/TransactionFormAmount';
+export { default as TransactionFormType } from './AddTransaction/TransactionFormInputs/TransactionFormType';
+export { default as TransactionFormCategory } from './AddTransaction/TransactionFormInputs/TransactionFormCategory';
+export { default as TransactionFormNote } from './AddTransaction/TransactionFormInputs/TransactionFormNote';
+export { default as TransactionFormDate } from './AddTransaction/TransactionFormInputs/TransactionFormDate';

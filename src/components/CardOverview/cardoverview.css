@@ -10,16 +10,17 @@
   align-items: center;
   gap: 1.125rem;
   text-align: center;
+  box-shadow: 4px 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .card-overview h2 {
   font-weight: 400;
-  font-size: var(--fz-small-mobile);
+  font-size: var(--fz-xsmall);
 }
 
 .card-overview p {
   font-weight: 600;
-  font-size: var(--fz-medium-mobile);
+  font-size: var(--fz-small);
 }
 
 /* Images */
@@ -31,10 +32,20 @@
 /* MEDIA min-width: 600px */
 @media screen and (min-width: 600px) {
   .card-overview {
-    padding: 2.5rem;
+    padding: 2.5rem 2rem;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 2.5rem 1rem;
+    gap: 2.5rem 0.5rem;
+  }
+
+  .card-overview h2 {
+    font-weight: 400;
+    font-size: var(--fz-small);
+  }
+
+  .card-overview p {
+    font-weight: 600;
+    font-size: var(--fz-medium);
   }
 
   /* Images */

@@ -1,7 +1,44 @@
-.addTransaction {
-  color: black;
-  font-size: var(--fontThirty);
-  background-color: steelblue;
-  max-width: fit-content;
-  border-radius: 10px;
+.add-transaction-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  background-color: var(--color-background-light);
+  margin-bottom: 2rem;
+  width: min(95%, 850px);
+  margin-inline: auto;
+}
+
+.add-transaction-card h3 {
+  color: var(--color-title);
+  font-size: var(--fz-xsmall);
+  font-weight: 600;
+}
+
+.add-transaction-card__img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--color-linear-button);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.4s;
+}
+
+.add-transaction-card__img:hover {
+  transform: scale(1.04);
+}
+
+/* MEDIA min-width: 600px */
+@media screen and (min-width: 600px) {
+  .add-transaction-card h3 {
+    font-size: var(--fz-medium);
+  }
+
+  .add-transaction-card__img {
+    width: 36px;
+    height: 36px;
+  }
 }

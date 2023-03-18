@@ -1,4 +1,39 @@
-.transActionForm {
-  color: black;
-  font-size: var(--fontThirty);
+.form-card {
+  width: min(95%, 850px);
+  margin-inline: auto;
+  background-color: var(--color-white);
+  padding: 2.5rem 1rem;
+}
+
+.transactiom-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.125rem;
+}
+
+/* Forms */
+input {
+  color: var(--color-title);
+}
+
+::placeholder,
+input[type='date'] {
+  color: var(--color-text);
+}
+
+input,
+select {
+  display: block;
+  font-family: inherit;
+  border: 0;
+  background-color: var(--color-background-light);
+  width: min(100%, 650px);
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+}
+
+select {
+  color: var(--color-text);
+  border-right: 1.25rem solid transparent;
 }

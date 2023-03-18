@@ -1,4 +1,10 @@
-.transactions {
-  color: black;
-  font-size: var(--fontThirty);
+.transactions__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.transactions__header h4 {
+  font-size: var(--fz-medium);
+  font-weight: 600;
 }

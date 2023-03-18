@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlnsSvg="http://www.w3.org/2000/svg" version="1.1" id="svg1317" width="682.66669" height="682.66669" viewBox="0 0 682.66669 682.66669">
+  <defs id="defs1321">
+    <clipPath clipPathUnits="userSpaceOnUse" id="clipPath1331">
+      <path d="M 0,512 H 512 V 0 H 0 Z" id="path1329"/>
+    </clipPath>
+    <clipPath clipPathUnits="userSpaceOnUse" id="clipPath1343">
+      <path d="M 0,512 H 512 V 0 H 0 Z" id="path1341"/>
+    </clipPath>
+  </defs>
+  <mask id="custom"><rect id="bg" x="0" y="0" width="100%" height="100%" fill="white"/><g transform="matrix(1.3333333,0,0,-1.3333333,0,682.66667)"/></mask><g mask="url(#custom)"><g id="g1323" transform="matrix(1.3333333,0,0,-1.3333333,0,682.66667)">
+    <g id="g1325">
+      <g id="g1327" clip-path="url(#clipPath1331)">
+        <path d="m 280.583,7.516 h -49.166 v 284.308 h 49.166 z" style="fill:none;stroke:#000000;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path1333"/>
+      </g>
+    </g>
+    <path d="m 280.583,291.824 h -49.166 v 97.263 h 49.166 z" style="fill:none;stroke:#000000;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path1335"/>
+    <g id="g1337">
+      <g id="g1339" clip-path="url(#clipPath1343)">
+        <g id="g1345" transform="translate(298.7529,389.0869)">
+          <path d="m 0,0 v 25.295 c 0,9.749 -7.976,17.726 -17.725,17.726 h -50.59 c -9.749,0 -17.725,-7.977 -17.725,-17.726 L -86.04,0 Z" style="fill:none;stroke:#000000;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path1347"/>
+        </g>
+        <g id="g1349" transform="translate(360.541,457.3896)">
+          <path d="m 0,0 -66.553,-30.975 c 2.945,-3.168 4.765,-7.393 4.765,-12.032 V -68.303 H 41.178 v 42.05 C 41.178,-5.08 19.196,8.935 0,0 Z" style="fill:none;stroke:#000000;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path1351"/>
+        </g>
+        <g id="g1353" transform="translate(217.4765,426.4145)">
+          <path d="m 0,0 -66.552,30.975 c -19.196,8.935 -41.177,-5.08 -41.177,-26.253 v -42.05 H -4.764 v 25.296 C -4.764,-7.393 -2.943,-3.168 0,0 Z" style="fill:none;stroke:#000000;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path1355"/>
+        </g>
+        <g id="g1357" transform="translate(371.8554,460.1045)">
+          <path d="m 0,0 -26.679,39.244 c -4.536,6.673 -14.299,6.881 -19.114,0.406 l -50.312,-67.647 h 5.278 c 5.109,0 9.719,-2.205 12.961,-5.694 0,0.001 -0.001,0.001 -0.001,0.001 l 66.553,30.975 C -7.587,-0.98 -3.756,-0.12 0,0 Z" style="fill:none;stroke:#000000;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path1359"/>
+        </g>
+        <g id="g1361" transform="translate(139.6103,460.1045)">
+          <path d="m 0,0 26.679,39.244 c 4.536,6.673 14.299,6.881 19.114,0.406 l 50.312,-67.647 h -5.278 c -5.109,0 -9.719,-2.205 -12.961,-5.694 0,0.001 0.001,0.001 0.001,0.001 L 11.314,-2.715 C 7.587,-0.98 3.756,-0.12 0,0 Z" style="fill:none;stroke:#000000;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path1363"/>
+        </g>
+        <g id="g1365" transform="translate(371.8554,7.5156)">
+          <path d="m 0,0 h 53.02 c 7.053,0 12.825,5.771 12.825,12.826 V 284.308 H -297.556 V 12.826 C -297.556,5.771 -291.784,0 -284.73,0 H -35" style="fill:none;stroke:#000000;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path1367"/>
+        </g>
+        <g id="g1369" transform="translate(453.1982,357.9555)">
+          <path d="m 0,0 v 18.306 c 0,7.054 -5.771,12.826 -12.825,12.826 h -368.746 c -7.054,0 -12.825,-5.772 -12.825,-12.826 v -71.612 c 0,-7.054 5.771,-12.826 12.825,-12.826 H -12.825 C -5.771,-66.132 0,-60.36 0,-53.306 V -35" style="fill:none;stroke:#000000;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path1371"/>
+        </g>
+      </g>
+    </g>
+  </g></g>
+</svg>

@@ -12,6 +12,7 @@ export { default as TransactionsList } from './Transactions/TransactionsList/Tra
 export { default as TransactionDiagramList } from './TransactionDiagram/TransactionDiagramList/TransactionDiagramList.jsx';
 
 //new components added
+
 export { default as Button } from './UI/Button';
 export { default as Card } from './UI/Card';
 export { default as Container } from './UI/Container';
@@ -21,3 +22,4 @@ export { default as TransactionFormType } from './AddTransaction/TransactionForm
 export { default as TransactionFormCategory } from './AddTransaction/TransactionFormInputs/TransactionFormCategory';
 export { default as TransactionFormNote } from './AddTransaction/TransactionFormInputs/TransactionFormNote';
 export { default as TransactionFormDate } from './AddTransaction/TransactionFormInputs/TransactionFormDate';
+export { default as TransactionsListItem } from './Transactions/TransactionsList/TransactionsListItem';

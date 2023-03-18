@@ -1,0 +1,72 @@
+.transactions-list--item {
+  background-color: var(--color-white);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Image */
+.transaction-left__img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--color-background-light);
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.transaction-left__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Category */
+.transaction-left__category {
+  font-weight: 600;
+  font-size: var(--fz-small);
+}
+
+/* Note & Date*/
+.transaction-left__note,
+.transaction-right__date {
+  color: var(--color-text);
+  margin-top: 0.25rem;
+}
+
+/* Amount */
+.transaction-right__amount {
+  font-size: var(--fz-medium);
+}
+
+.transaction-right {
+  text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+  .transaction-left {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    grid-template-rows: repeat(2, min-content);
+    gap: 0 1rem;
+  }
+
+  .transaction-left__img {
+    grid-row: 1 / -1;
+  }
+
+  .transaction-left__category {
+    align-self: end;
+  }
+
+  .transaction-left__note {
+    align-self: start;
+    margin-top: 0;
+  }
+
+  /* Amount */
+  .transaction-right__amount {
+    font-size: var(--fz-medium2);
+  }
+}

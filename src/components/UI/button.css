@@ -1,0 +1,13 @@
+.btn {
+  padding: 0.75rem;
+  border-radius: 30px;
+  border: 0;
+  font-size: var(--fz-small);
+}
+
+.btn-primary {
+  color: var(--color-white);
+  background: var(--color-linear-button);
+  width: min(100%, 650px);
+  margin-inline: auto;
+}

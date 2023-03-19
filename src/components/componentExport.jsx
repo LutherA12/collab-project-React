@@ -12,7 +12,6 @@ export { default as TransactionsList } from './Transactions/TransactionsList/Tra
 export { default as TransactionDiagramList } from './TransactionDiagram/TransactionDiagramList/TransactionDiagramList.jsx';
 
 //new components added
-
 export { default as Button } from './UI/Button';
 export { default as Card } from './UI/Card';
 export { default as Container } from './UI/Container';

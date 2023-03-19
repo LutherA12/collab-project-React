@@ -15,43 +15,42 @@ import Subscribtions from '../../../assets/categories/subscribtion.svg';
 import Transportation from '../../../assets/categories/transportation.svg';
 import Education from '../../../assets/categories/education.svg';
 
-//example of the given data
-
-const transactions = [
-  {
-    amount: '900',
-    type: 'Income',
-    category: 'Loan',
-    note: 'Some',
-    date: '2023-03-01',
-    id: Math.random().toFixed(4),
-    imgSrc: Loan,
-  },
-  {
-    amount: '-30',
-    type: 'Expense',
-    category: 'Food',
-    note: 'KFC',
-    date: '2023-02-13',
-    id: Math.random().toFixed(4),
-    imgSrc: Food,
-  },
-  {
-    amount: '-90',
-    type: 'Expense',
-    category: 'Shoppping',
-    note: 'Clothes',
-    date: '2023-01-15',
-    id: Math.random().toFixed(4),
-    imgSrc: Shopping,
-  },
-];
-
-const transactionsEl = transactions.map((transaction) => (
-  <TransactionsListItem key={transaction.id} transaction={transaction} />
-));
-
 function TransactionsList() {
+  //example of the given data
+  const transactions = [
+    {
+      amount: '900',
+      type: 'Income',
+      category: 'Loan',
+      note: 'Some',
+      date: '2023-03-01',
+      id: Math.random().toFixed(4),
+      imgSrc: Loan,
+    },
+    {
+      amount: '-30',
+      type: 'Expense',
+      category: 'Food',
+      note: 'KFC',
+      date: '2023-02-13',
+      id: Math.random().toFixed(4),
+      imgSrc: Food,
+    },
+    {
+      amount: '-90',
+      type: 'Expense',
+      category: 'Shoppping',
+      note: 'Clothes',
+      date: '2023-01-15',
+      id: Math.random().toFixed(4),
+      imgSrc: Shopping,
+    },
+  ];
+
+  const transactionsEl = transactions.map((transaction) => (
+    <TransactionsListItem key={transaction.id} transaction={transaction} />
+  ));
+
   return <ul className="transactions-list card">{transactionsEl}</ul>;
 }
 

@@ -6,6 +6,7 @@ import {
   TransactionFormNote,
   TransactionFormDate,
   Card,
+  Button,
 } from '../../componentExport';
 
 function TransactionInfo() {
@@ -17,6 +18,7 @@ function TransactionInfo() {
         <TransactionFormCategory />
         <TransactionFormNote />
         <TransactionFormDate />
+        <Button className="btn-primary">Save</Button>
       </form>
     </Card>
   );

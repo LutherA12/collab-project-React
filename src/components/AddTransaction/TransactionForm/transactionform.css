@@ -11,6 +11,14 @@
   gap: 1.125rem;
 }
 
+.transactiom-form > div:first-child {
+  margin-bottom: 2rem;
+}
+
+.transactiom-form > button {
+  margin-top: 2.5rem;
+}
+
 /* Forms */
 input {
   color: var(--color-title);

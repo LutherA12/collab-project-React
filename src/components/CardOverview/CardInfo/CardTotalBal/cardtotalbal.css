@@ -1,4 +1,12 @@
-.cardTotalBal {
-  color: black;
-  font-size: var(--fontThirty);
+#total-balance {
+  font-size: var(--fz-medium2);
+}
+
+@media screen and (min-width: 600px) {
+  .card-overview > div:first-child {
+    width: 100%;
+  }
+  #total-balance {
+    font-size: var(--fz-large);
+  }
 }

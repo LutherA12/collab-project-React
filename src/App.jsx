@@ -1,19 +1,23 @@
-import "./App.css";
+import './App.css';
 import {
   User,
   CardOverview,
   AddTransaction,
   Transactions,
-} from "./components/componentExport.jsx";
+  Container,
+  Card,
+} from './components/componentExport.jsx';
 
 function App() {
   return (
-    <div>
+    <Container>
       <User />
-      <CardOverview />
-      <AddTransaction />
-      <Transactions />
-    </div>
+      <main className="card">
+        <CardOverview />
+        <AddTransaction />
+        <Transactions />
+      </main>
+    </Container>
   );
 }
 

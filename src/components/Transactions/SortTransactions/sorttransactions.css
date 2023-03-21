@@ -1,4 +1,29 @@
-.sortTransactions {
-  color: black;
-  font-size: var(--fontThirty);
+.transaction__filter {
+  position: relative;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.transaction__filter img {
+  cursor: pointer;
+}
+
+/* DOWNDROP */
+.transaction__filter--downdrop {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background-color: var(--color-background-light);
+  width: 150px;
+
+  /* for now */
+  display: none;
+}
+
+.transaction__filter--downdrop > p {
+  padding: 0.75rem 1rem;
+}
+
+.transaction__filter--downdrop > p:not(:last-child) {
+  border-bottom: 1px solid var(--color-white);
 }

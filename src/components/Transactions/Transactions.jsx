@@ -1,24 +1,15 @@
-import {
-  SortTransactions,
-  TransactionDiagram,
-  TransactionsList,
-} from "../componentExport";
-import "./transactions.css";
+import { SortTransactions, TransactionsList } from '../componentExport';
+import './transactions.css';
 
 function Transactions() {
   return (
-    <div className="transactions">
-      <div>
-        <TransactionDiagram />
-      </div>
-      <div>
-        Transactions
+    <section className="transactions">
+      <div className="transactions__header">
+        <h4>Transactions</h4>
         <SortTransactions />
       </div>
-      <div>
-        <TransactionsList />
-      </div>
-    </div>
+      <TransactionsList />
+    </section>
   );
 }
 

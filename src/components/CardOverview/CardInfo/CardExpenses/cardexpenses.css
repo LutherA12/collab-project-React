@@ -1,4 +1,6 @@
-.cardExpenses {
-  color: black;
-  font-size: var(--fontThirty);
+@media screen and (min-width: 600px) {
+  .card-overview > div:last-child {
+    text-align: left;
+    margin-left: auto;
+  }
 }

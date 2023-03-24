@@ -1,14 +1,32 @@
-import './user.css';
+import "./user.css";
 
 function User() {
+  /*const lineBreak = (
+    <>
+      <br />
+    </>
+  );*/
+  const userInfo = [
+    {
+      id: 1,
+      img: (
+        <>
+          <img src="" alt="" />
+        </>
+      ),
+      greeting: <p className="user-greeting">Welcome back</p>,
+      name: <h1 className="user-name">John Doe</h1>,
+    },
+  ];
+
   return (
-    <header className="user-info">
-      <div className="user-info__profile-pic"></div>
-      <div className="user-info__content">
-        <p className="user-info__content--greeting">Welcome back,</p>
-        <h1 className="user-info__content--username">John Doe</h1>
+    <div className="user-parent-container">
+      <div className="user-picture">{userInfo[0].img}</div>
+      <div className="user-content-container">
+        {userInfo[0].greeting}
+        {userInfo[0].name}
       </div>
-    </header>
+    </div>
   );
 }
 

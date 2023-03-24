@@ -1,23 +1,23 @@
-.user-info {
+.user-parent-container {
   margin: 2.5rem 0 1.5rem;
   display: flex;
   align-items: center;
   gap: 1.25rem;
 }
 
-.user-info__profile-pic {
+.user-picture {
   width: 80px;
   height: 80px;
   border-radius: 50%;
   background-color: var(--color-white);
 }
 
-.user-info__content--greeting {
+.user-greeting {
   color: var(--color-text);
   font-size: var(--fz-xsmall);
 }
 
-.user-info__content--username {
+.user-name {
   font-size: var(--fz-medium);
   font-weight: 600;
 }

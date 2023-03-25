@@ -1,6 +1,6 @@
 import './transactionFormNote.css';
 
-function TransactionFormNote({ setNote }) {
+function TransactionFormNote({ note, setNote }) {
   const handleNoteOnChange = (e) => {
     setNote(e.target.value);
   };
@@ -11,6 +11,7 @@ function TransactionFormNote({ setNote }) {
         type="text"
         placeholder="Note"
         onChange={handleNoteOnChange}
+        value={note}
       ></input>
     </div>
   );

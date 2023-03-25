@@ -33,7 +33,12 @@ function TransactionFormCategory({
 
   return (
     <div className="form-field form-field__category">
-      <select name="category" id="category" onChange={handleCategoryOnChange}>
+      <select
+        value={category}
+        name="category"
+        id="category"
+        onChange={handleCategoryOnChange}
+      >
         {options.map((option, index) => (
           <option value={option} key={`cat-${index}`}>
             {option}

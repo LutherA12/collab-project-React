@@ -46,13 +46,33 @@ function TransactionsProvider({ children }) {
     return totalBalance;
   };
 
+  //Calc all incomes
+  const calcIncome = () => {
+    const income = transactions
+      .filter((transaction) => transaction.type === 'Income')
+      .map((transaction) => transaction.amount)
+      .reduce((acc, cur) => acc + cur);
+    console.log(income);
+  };
+
+  //Calc all expenses
+  const calcExpenses = () => {
+    const expenses = transactions
+      .filter((transaction) => transaction.type === 'Expense')
+      .map((transaction) => transaction.amount)
+      .reduce((acc, cur) => acc + cur);
+    console.log(expenses);
+  };
+
   const data = {
     transactions,
     onSubmit,
     calcTotalAmount,
+    calcIncome,
+    calcExpenses,
   };
 
-  console.log(transactions);
+  // console.log(transactions);
 
   return (
     <TransactionsContext.Provider value={data}>

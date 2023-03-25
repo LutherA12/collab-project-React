@@ -1,19 +1,20 @@
 import './transactionsListItem.css';
 
-import TransactionsContext from '../../../context/TransactionsContext';
-import Food from '../../../assets/categories/food.svg';
-import Loan from '../../../assets/categories/loan.svg';
-// import Drink from '../../../assets/categories/drink.svg';
-// import Entertainmet from '../../../assets/categories/entertainment.svg';
-// import Travel from '../../../assets/categories/travel.svg';
-// import Health from '../../../assets/categories/health.svg';
-import Shopping from '../../../assets/categories/shopping.svg';
-// import Pet from '../../../assets/categories/pet.svg';
-// import Housing from '../../../assets/categories/house.svg';
-// import Gifts from '../../../assets/categories/gifts.svg';
-// import Subscribtions from '../../../assets/categories/subscribtion.svg';
-// import Transportation from '../../../assets/categories/transportation.svg';
-// import Education from '../../../assets/categories/education.svg';
+import {
+  Food,
+  Loan,
+  Drink,
+  Entertainment,
+  Travel,
+  Health,
+  Shopping,
+  Pet,
+  Housing,
+  Gifts,
+  Subscribtion,
+  Education,
+  Transportation,
+} from '../../componentExport';
 
 function TransactionsListItem({ transaction }) {
   //Show image based on the category selected
@@ -23,7 +24,17 @@ function TransactionsListItem({ transaction }) {
   //The only way I could think of that works with the images
   if (imgCategory.includes('food')) imgSrc = Food;
   if (imgCategory.includes('loan')) imgSrc = Loan;
+  if (imgCategory.includes('drink')) imgSrc = Drink;
+  if (imgCategory.includes('entertainment')) imgSrc = Entertainment;
+  if (imgCategory.includes('travel')) imgSrc = Travel;
+  if (imgCategory.includes('health')) imgSrc = Health;
   if (imgCategory.includes('shopping')) imgSrc = Shopping;
+  if (imgCategory.includes('pet')) imgSrc = Pet;
+  if (imgCategory.includes('housing')) imgSrc = Housing;
+  if (imgCategory.includes('gifts')) imgSrc = Gifts;
+  if (imgCategory.includes('subscribtion')) imgSrc = Subscribtion;
+  if (imgCategory.includes('education')) imgSrc = Education;
+  if (imgCategory.includes('transportation')) imgSrc = Transportation;
 
   return (
     <li className="transactions-list--item card">

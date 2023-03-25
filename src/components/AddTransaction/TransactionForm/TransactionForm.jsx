@@ -13,7 +13,7 @@ import { useContext } from 'react';
 import TransactionsContext from '../../../context/TransactionsContext';
 
 function TransactionInfo() {
-  const dateFormat = new Date().toISOString().substring(0, 10);
+  const today = new Date().toISOString().substring(0, 10);
 
   const { onSubmit } = useContext(TransactionsContext);
   const [amountError, setAmountError] = useState('');
@@ -22,7 +22,7 @@ function TransactionInfo() {
   const [categoryError, setCategoryError] = useState('');
   const [type, setType] = useState('Income');
   const [note, setNote] = useState('');
-  const [date, setDate] = useState(dateFormat);
+  const [date, setDate] = useState(today);
   // const [isValid, setIsValid] = useState(false);
 
   const handleFormSubmit = (e) => {
@@ -58,6 +58,10 @@ function TransactionInfo() {
 
     //Reset
     setAmount('');
+    setType('Income');
+    setCategory('Category');
+    setNote('');
+    setDate(today);
   };
 
   return (
@@ -68,15 +72,16 @@ function TransactionInfo() {
           setAmount={setAmount}
           amountError={amountError}
           setAmountError={setAmountError}
+          type={type}
         />
-        <TransactionFormType setType={setType} />
+        <TransactionFormType setType={setType} type={type} />
         <TransactionFormCategory
           category={category}
           setCategory={setCategory}
           setCategoryError={setCategoryError}
           categoryError={categoryError}
         />
-        <TransactionFormNote setNote={setNote} />
+        <TransactionFormNote setNote={setNote} note={note} />
         <TransactionFormDate date={date} setDate={setDate} />
         <Button className="btn-primary">Save</Button>
       </form>

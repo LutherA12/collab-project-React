@@ -1,7 +1,13 @@
 import './transactionFormCategory.css';
 
-function TransactionFormCategory() {
+function TransactionFormCategory({
+  category,
+  setCategory,
+  setCategoryError,
+  categoryError,
+}) {
   const options = [
+    'Category',
     'Food',
     'Drink',
     'Education',
@@ -10,23 +16,31 @@ function TransactionFormCategory() {
     'Loan',
     'Housing',
     'Shopping',
-    'Groceries',
     'Pet',
     'Subscriptions',
     'Health',
     'Travel',
   ];
 
+  const handleCategoryOnChange = (e) => {
+    setCategory(e.target.value);
+    //Remove error if any other option than category is selected
+    if (e.target.value !== 'Category') {
+      setCategoryError('');
+    }
+    // console.log(e.target.value);
+  };
+
   return (
     <div className="form-field form-field__category">
-      <select name="category" id="category">
-        <option>Category</option>
+      <select name="category" id="category" onChange={handleCategoryOnChange}>
         {options.map((option, index) => (
           <option value={option} key={`cat-${index}`}>
             {option}
           </option>
         ))}
       </select>
+      {categoryError}
     </div>
   );
 }

@@ -14,8 +14,10 @@
   --color-title: #1a1919;
   --color-white: #fff;
   --color-light: #fbfbfb;
+  --color-error: crimson;
 
   /* font-sizes */
+  --fz-error: 0.75rem;
   --fz-xsmall: 1rem;
   --fz-small: 1.25rem;
   --fz-medium: 1.35rem;

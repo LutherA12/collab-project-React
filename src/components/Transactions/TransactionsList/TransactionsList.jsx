@@ -6,7 +6,8 @@ import TransactionsContext from '../../../context/TransactionsContext';
 
 function TransactionsList() {
   const { transactions } = useContext(TransactionsContext);
-  // console.log(transactions);
+
+  console.log(transactions);
 
   const transactionsEl = transactions.map((transaction) => (
     //Still passing the transaction as a prop to use that specific transaction on the LitstItem

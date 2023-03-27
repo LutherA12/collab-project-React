@@ -1,19 +1,16 @@
-import "./cardtotalbal.css";
+import './cardtotalbal.css';
+import { useContext } from 'react';
+import TransactionsContext from '../../../../context/TransactionsContext';
 
 function CardTotalBal() {
-  const balanceInfo = [
-    {
-      id: 1,
-      balanceGreeting: "Total Balance",
-      balance: <>2.500,00€</>,
-    },
-  ];
+  const { calcTotalAmount } = useContext(TransactionsContext);
+  const totalBalance = calcTotalAmount();
 
   return (
     <div className="card-overview__total">
-      <h2>{balanceInfo[0].balanceGreeting}</h2>
+      <h2>Total Balance</h2>
       <p>
-        <span id="total-balance">{balanceInfo[0].balance}</span>
+        <span id="total-balance">{totalBalance}</span>€
       </p>
     </div>
   );

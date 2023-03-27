@@ -39,10 +39,9 @@ function TransactionsProvider({ children }) {
 
   //Calc the total amount
   const calcTotalAmount = () => {
-    const transactionAmounts = transactions.map(
-      (transaction) => transaction.amount
-    );
-    const totalBalance = transactionAmounts.reduce((acc, cur) => acc + cur);
+    const totalBalance = transactions
+      .map((transaction) => transaction.amount)
+      .reduce((acc, cur) => acc + cur);
     return totalBalance;
   };
 
@@ -52,7 +51,7 @@ function TransactionsProvider({ children }) {
       .filter((transaction) => transaction.type === 'Income')
       .map((transaction) => transaction.amount)
       .reduce((acc, cur) => acc + cur);
-    console.log(income);
+    return income;
   };
 
   //Calc all expenses
@@ -61,7 +60,7 @@ function TransactionsProvider({ children }) {
       .filter((transaction) => transaction.type === 'Expense')
       .map((transaction) => transaction.amount)
       .reduce((acc, cur) => acc + cur);
-    console.log(expenses);
+    return expenses;
   };
 
   const data = {
@@ -71,8 +70,6 @@ function TransactionsProvider({ children }) {
     calcIncome,
     calcExpenses,
   };
-
-  // console.log(transactions);
 
   return (
     <TransactionsContext.Provider value={data}>

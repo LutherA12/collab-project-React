@@ -13,9 +13,12 @@ import { useContext } from 'react';
 import TransactionsContext from '../../../context/TransactionsContext';
 
 function TransactionInfo() {
+  //Format date, to pass as a value on the new Date() obj.
   const today = new Date().toISOString().substring(0, 10);
 
+  //Needed function from the Context
   const { onSubmit } = useContext(TransactionsContext);
+  //States
   const [amountError, setAmountError] = useState('');
   const [amount, setAmount] = useState('');
   const [category, setCategory] = useState('Category');
@@ -23,19 +26,14 @@ function TransactionInfo() {
   const [type, setType] = useState('Income');
   const [note, setNote] = useState('');
   const [date, setDate] = useState(today);
-  // const [isValid, setIsValid] = useState(false);
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
     //Amount validation
-    //Validation not working properly TODOS :(
-    if (!amount || amount.length === 0) {
-      // setIsValid(false);
-      console.log('error');
+    if (!amount) {
       setAmountError(<p className="error">Field cannot be empty or 0</p>);
     } else {
-      // setIsValid(true);
       setAmountError('');
     }
 
@@ -46,17 +44,19 @@ function TransactionInfo() {
       setCategoryError('');
     }
 
-    //add newTransaction to the transactions
-    onSubmit({
-      amount,
-      type,
-      category,
-      note,
-      date,
-      id: Math.random().toFixed(6),
-    });
+    //add newTransaction to the transactions array
+    if (amount && category !== 'Category') {
+      onSubmit({
+        amount,
+        type,
+        category,
+        note,
+        date,
+        id: Math.random(),
+      });
+    }
 
-    //Reset
+    //Reset inputs
     setAmount('');
     setType('Income');
     setCategory('Category');

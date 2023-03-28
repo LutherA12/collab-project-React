@@ -1,3 +1,8 @@
+.transactions {
+  width: min(95%, 850px);
+  margin-inline: auto;
+}
+
 .transactions__header {
   display: flex;
   align-items: center;

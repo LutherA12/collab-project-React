@@ -11,7 +11,6 @@ export { default as TransactionDiagram } from './TransactionDiagram/TransactionD
 export { default as TransactionsList } from './Transactions/TransactionsList/TransactionsList.jsx';
 export { default as TransactionDiagramList } from './TransactionDiagram/TransactionDiagramList/TransactionDiagramList.jsx';
 
-//new components added
 export { default as Button } from './UI/Button';
 export { default as Card } from './UI/Card';
 export { default as Container } from './UI/Container';
@@ -22,6 +21,7 @@ export { default as TransactionFormCategory } from './AddTransaction/Transaction
 export { default as TransactionFormNote } from './AddTransaction/TransactionFormInputs/TransactionFormNote';
 export { default as TransactionFormDate } from './AddTransaction/TransactionFormInputs/TransactionFormDate';
 export { default as TransactionsListItem } from './Transactions/TransactionsList/TransactionsListItem';
+export { default as TransactionSuccessMessage } from './AddTransaction/TransactionMessage/TransactionSuccessMessage';
 
 //import images
 export { default as Food } from '../assets/categories/food.svg';

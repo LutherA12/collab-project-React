@@ -21,7 +21,7 @@ function TransactionsListItem({ transaction }) {
   let imgSrc = null;
   const imgCategory = transaction.category.toLowerCase();
 
-  //The only way I could think of that works with the images
+  //Import the right image based on category
   if (imgCategory.includes('food')) imgSrc = Food;
   if (imgCategory.includes('loan')) imgSrc = Loan;
   if (imgCategory.includes('drink')) imgSrc = Drink;
@@ -36,6 +36,13 @@ function TransactionsListItem({ transaction }) {
   if (imgCategory.includes('education')) imgSrc = Education;
   if (imgCategory.includes('transportation')) imgSrc = Transportation;
 
+  let expenseSign = '';
+
+  //UI: set a minus if expense (-90€)
+  if (transaction.type === 'Expense') {
+    expenseSign = '-';
+  }
+
   return (
     <li className="transactions-list--item card">
       <div className="transaction-left">
@@ -46,7 +53,9 @@ function TransactionsListItem({ transaction }) {
         <p className="transaction-left__note">{transaction.note}</p>
       </div>
       <div className="transaction-right">
-        <p className="transaction-right__amount">{transaction.amount}€</p>
+        <p className="transaction-right__amount">
+          {`${expenseSign}${transaction.amount}`}€
+        </p>
         <p className="transaction-right__date">{transaction.date}</p>
       </div>
     </li>

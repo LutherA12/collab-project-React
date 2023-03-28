@@ -9,10 +9,22 @@ import {
   Button,
 } from '../../componentExport';
 import { useState } from 'react';
+//unique id generator
+import uuid from 'react-uuid';
+
+//icons
+import plusIcon from '../../../assets/plus-icon.svg';
+
+//Context
 import { useContext } from 'react';
 import TransactionsContext from '../../../context/TransactionsContext';
 
-function TransactionInfo() {
+function TransactionInfo({
+  setIsFormOpen,
+  setIcon,
+  setIsMessageVisible,
+  isMessageVisible,
+}) {
   //Format date, to pass as a value on the new Date() obj.
   const today = new Date().toISOString().substring(0, 10);
 
@@ -52,8 +64,19 @@ function TransactionInfo() {
         category,
         note,
         date,
-        id: Math.random(),
+        id: uuid(),
       });
+      //Close the form after submitting
+      setIsFormOpen(false);
+      setIcon(plusIcon);
+
+      //Show the successful message after the form was submitted and hide it again.
+      setTimeout(() => {
+        setIsMessageVisible(true);
+        setTimeout(() => {
+          setIsMessageVisible(false);
+        }, 2500);
+      }, 500);
     }
 
     //Reset inputs

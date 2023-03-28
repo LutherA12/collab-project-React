@@ -1,4 +1,6 @@
 import { createContext, useState } from 'react';
+//unique id generator package
+import uuid from 'react-uuid';
 
 const TransactionsContext = createContext();
 
@@ -9,40 +11,33 @@ const DUMMY_DATA = [
     category: 'Loan',
     note: 'SomeNote',
     date: '2023-03-01',
-    id: Math.random().toFixed(6),
+    id: uuid(),
   },
   {
-    amount: -30,
+    amount: 30,
     type: 'Expense',
     category: 'Food',
     note: 'KFC',
     date: '2023-02-13',
-    id: Math.random().toFixed(6),
+    id: uuid(),
   },
   {
-    amount: -90,
+    amount: 90,
     type: 'Expense',
     category: 'Shopping',
     note: 'Clothes',
     date: '2023-01-15',
-    id: Math.random().toFixed(6),
+    id: uuid(),
   },
 ];
 
 function TransactionsProvider({ children }) {
   const [transactions, setTransactions] = useState(DUMMY_DATA);
+  console.log(transactions);
 
   //Adds the existing transactions and a new one at the end after every successfull submit
   const onSubmit = (transaction) => {
     setTransactions(() => [...transactions, transaction]);
-  };
-
-  //Calc the total amount
-  const calcTotalAmount = () => {
-    const totalBalance = transactions
-      .map((transaction) => transaction.amount)
-      .reduce((acc, cur) => acc + cur);
-    return totalBalance;
   };
 
   //Calc all incomes
@@ -61,6 +56,12 @@ function TransactionsProvider({ children }) {
       .map((transaction) => transaction.amount)
       .reduce((acc, cur) => acc + cur);
     return expenses;
+  };
+
+  //Calc the total amount
+  const calcTotalAmount = () => {
+    const totalBalance = calcIncome() - calcExpenses();
+    return totalBalance;
   };
 
   const data = {

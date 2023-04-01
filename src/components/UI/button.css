@@ -3,6 +3,7 @@
   border-radius: 30px;
   border: 0;
   font-size: var(--fz-small);
+  cursor: pointer;
 }
 
 .btn-primary {
@@ -10,4 +11,12 @@
   background: var(--color-linear-button);
   width: min(100%, 650px);
   margin-inline: auto;
+  transition: transform 0.3s;
+}
+
+.btn-primary:hover {
+  transform: scale(1.02);
+}
+.btn-primary:active {
+  transform: scale(0.98);
 }

@@ -45,3 +45,12 @@ select {
   color: var(--color-text);
   border-right: 1.25rem solid transparent;
 }
+
+/* Util class */
+.error {
+  width: min(100%, 650px);
+  margin: 0 auto;
+  color: var(--color-error);
+  font-size: var(--fz-error);
+  margin-top: 0.25rem;
+}

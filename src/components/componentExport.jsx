@@ -11,7 +11,6 @@ export { default as TransactionDiagram } from './TransactionDiagram/TransactionD
 export { default as TransactionsList } from './Transactions/TransactionsList/TransactionsList.jsx';
 export { default as TransactionDiagramList } from './TransactionDiagram/TransactionDiagramList/TransactionDiagramList.jsx';
 
-//new components added
 export { default as Button } from './UI/Button';
 export { default as Card } from './UI/Card';
 export { default as Container } from './UI/Container';
@@ -22,3 +21,19 @@ export { default as TransactionFormCategory } from './AddTransaction/Transaction
 export { default as TransactionFormNote } from './AddTransaction/TransactionFormInputs/TransactionFormNote';
 export { default as TransactionFormDate } from './AddTransaction/TransactionFormInputs/TransactionFormDate';
 export { default as TransactionsListItem } from './Transactions/TransactionsList/TransactionsListItem';
+export { default as TransactionSuccessMessage } from './AddTransaction/TransactionMessage/TransactionSuccessMessage';
+
+//import images
+export { default as Food } from '../assets/categories/food.svg';
+export { default as Loan } from '../assets/categories/loan.svg';
+export { default as Drink } from '../assets/categories/drink.svg';
+export { default as Entertainment } from '../assets/categories/entertainment.svg';
+export { default as Travel } from '../assets/categories/travel.svg';
+export { default as Health } from '../assets/categories/health.svg';
+export { default as Shopping } from '../assets/categories/shopping.svg';
+export { default as Pet } from '../assets/categories/pet.svg';
+export { default as Housing } from '../assets/categories/house.svg';
+export { default as Gifts } from '../assets/categories/gifts.svg';
+export { default as Subscribtion } from '../assets/categories/subscribtion.svg';
+export { default as Transportation } from '../assets/categories/transportation.svg';
+export { default as Education } from '../assets/categories/education.svg';

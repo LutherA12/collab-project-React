@@ -1,23 +1,21 @@
-import "./cardexpenses.css";
-import expensesArr from "../../../../assets/expenses-arrow.svg";
+import './cardexpenses.css';
+import expensesArr from '../../../../assets/expenses-arrow.svg';
+import { useContext } from 'react';
+import TransactionsContext from '../../../../context/TransactionsContext';
 
 function CardExpenses() {
-  const expensesInfo = [
-    {
-      id: 1,
-      expensesGreeting: "Expenses",
-      expenses: <>2.500,00€</>,
-      img: <img src={expensesArr} alt="" aria-hidden="true" />,
-    },
-  ];
+  const { calcExpenses } = useContext(TransactionsContext);
+  const totalExpenses = calcExpenses();
 
   return (
     <div className="card-overview__expenses">
-      <div className="card-overview__expenses__img">{expensesInfo[0].img}</div>
+      <div className="card-overview__expenses__img">
+        <img src={expensesArr} alt="" aria-hidden="true" />
+      </div>
       <div className="card-overview__expenses--content">
-        <h2>{expensesInfo[0].expensesGreeting}</h2>
+        <h2>Expenses</h2>
         <p>
-          <span id="expenses">{expensesInfo[0].expenses}</span>
+          -<span id="expenses">{totalExpenses}</span>€
         </p>
       </div>
     </div>

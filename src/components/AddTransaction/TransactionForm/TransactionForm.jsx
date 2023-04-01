@@ -19,12 +19,7 @@ import plusIcon from '../../../assets/plus-icon.svg';
 import { useContext } from 'react';
 import TransactionsContext from '../../../context/TransactionsContext';
 
-function TransactionInfo({
-  setIsFormOpen,
-  setIcon,
-  setIsMessageVisible,
-  isMessageVisible,
-}) {
+function TransactionInfo({ setIsFormOpen, setIcon, setIsMessageVisible }) {
   //Format date, to pass as a value on the new Date() obj.
   const today = new Date().toISOString().substring(0, 10);
 
@@ -70,13 +65,8 @@ function TransactionInfo({
       setIsFormOpen(false);
       setIcon(plusIcon);
 
-      //Show the successful message after the form was submitted and hide it again.
-      setTimeout(() => {
-        setIsMessageVisible(true);
-        setTimeout(() => {
-          setIsMessageVisible(false);
-        }, 2500);
-      }, 500);
+      //To show the successful message
+      setIsMessageVisible(true);
     }
 
     //Reset inputs

@@ -4,7 +4,7 @@ import {
   Card,
 } from '../componentExport';
 import './addtransaction.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import plusIcon from '../../assets/plus-icon.svg';
 import minusIcon from '../../assets/minus-icon.svg';
 
@@ -15,10 +15,23 @@ function AddTransaction() {
 
   //Toggle the Form
   const handleTransactionClick = () => {
-    setIsFormOpen(!isFormOpen);
-    // console.log(isFormOpen); //false in first run
+    setIsFormOpen(!isFormOpen); //false in first run
     isFormOpen ? setIcon(plusIcon) : setIcon(minusIcon);
   };
+
+  //Show the successful message
+  useEffect(() => {
+    if (!isMessageVisible) return;
+
+    const timer = setTimeout(() => {
+      setIsMessageVisible(false);
+    }, 2500);
+
+    //clear timer
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [isMessageVisible]);
 
   return (
     <section className="section-transaction-form">
@@ -35,7 +48,6 @@ function AddTransaction() {
         <TransactionForm
           setIsFormOpen={setIsFormOpen}
           setIcon={setIcon}
-          isMessageVisible={isMessageVisible}
           setIsMessageVisible={setIsMessageVisible}
         />
       )}

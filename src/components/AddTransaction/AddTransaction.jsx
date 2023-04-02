@@ -4,19 +4,44 @@ import {
   Card,
 } from '../componentExport';
 import './addtransaction.css';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import plusIcon from '../../assets/plus-icon.svg';
 import minusIcon from '../../assets/minus-icon.svg';
+//gsap animation
+import gsap from 'gsap';
 
 function AddTransaction() {
   const [isMessageVisible, setIsMessageVisible] = useState(false);
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [icon, setIcon] = useState(plusIcon);
+  //useRef
+  const formRef = useRef();
+
+  //animation on showing-hiding form
+  useEffect(() => {
+    if (isFormOpen) {
+      gsap.to(formRef.current, {
+        scaleY: 1,
+        height: 'auto',
+        transformOrigin: 'top',
+        opacity: 1,
+        autoAlpha: 1,
+      });
+    } else {
+      gsap.to(formRef.current, {
+        scaleY: 0,
+        height: 0,
+        opacity: 0,
+        autoAlpha: 0,
+      });
+    }
+  }, [isFormOpen]);
 
   //Toggle the Form
   const handleTransactionClick = () => {
     setIsFormOpen(!isFormOpen); //false in first run
     isFormOpen ? setIcon(plusIcon) : setIcon(minusIcon);
+    console.log(formRef);
   };
 
   //Show the successful message
@@ -44,13 +69,20 @@ function AddTransaction() {
           <img src={icon} alt="plus icon" aria-label="open form" />
         </div>
       </Card>
-      {isFormOpen && (
+      {/* {isFormOpen && (
         <TransactionForm
           setIsFormOpen={setIsFormOpen}
           setIcon={setIcon}
           setIsMessageVisible={setIsMessageVisible}
         />
-      )}
+      )} */}
+      <TransactionForm
+        ref={formRef}
+        isFormOpen={isFormOpen}
+        setIsFormOpen={setIsFormOpen}
+        setIcon={setIcon}
+        setIsMessageVisible={setIsMessageVisible}
+      />
       {isMessageVisible && <TransactionSuccessMessage />}
     </section>
   );

@@ -2,13 +2,19 @@
   width: min(95%, 850px);
   margin-inline: auto;
   background-color: var(--color-white);
-  padding: 2.5rem 1rem;
+  padding: 0.5rem 1rem;
 }
 
 .transactiom-form {
   display: flex;
   flex-direction: column;
   gap: 1.125rem;
+
+  /* gsap */
+  visibility: hidden;
+  opacity: 0;
+  transform: scaleY(0);
+  height: 0;
 }
 
 .transactiom-form > div:first-child {

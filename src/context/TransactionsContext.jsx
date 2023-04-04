@@ -33,7 +33,7 @@ const DUMMY_DATA = [
 
 function TransactionsProvider({ children }) {
   const [transactions, setTransactions] = useState(DUMMY_DATA);
-  console.log(transactions);
+  // console.log(transactions);
 
   //Adds the existing transactions and a new one at the end after every successfull submit
   const onSubmit = (transaction) => {

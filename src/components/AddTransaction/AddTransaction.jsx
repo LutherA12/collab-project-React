@@ -19,6 +19,9 @@ function AddTransaction() {
 
   //animation on showing-hiding form
   useEffect(() => {
+    //Show icon
+    isFormOpen ? setIcon(minusIcon) : setIcon(plusIcon);
+    //animate Form
     if (isFormOpen) {
       gsap.to(formRef.current, {
         scaleY: 1,
@@ -26,6 +29,7 @@ function AddTransaction() {
         transformOrigin: 'top',
         opacity: 1,
         autoAlpha: 1,
+        padding: '1.5rem 0.5rem',
       });
     } else {
       gsap.to(formRef.current, {
@@ -33,15 +37,14 @@ function AddTransaction() {
         height: 0,
         opacity: 0,
         autoAlpha: 0,
+        padding: 0,
       });
     }
   }, [isFormOpen]);
 
   //Toggle the Form
   const handleTransactionClick = () => {
-    setIsFormOpen(!isFormOpen); //false in first run
-    isFormOpen ? setIcon(plusIcon) : setIcon(minusIcon);
-    console.log(formRef);
+    setIsFormOpen(() => !isFormOpen);
   };
 
   //Show the successful message

@@ -1,11 +1,14 @@
 .transaction__filter {
   position: relative;
-  display: flex;
-  gap: 0.75rem;
 }
 
 .transaction__filter img {
   cursor: pointer;
+}
+
+.transaction__filter--btn {
+  display: flex;
+  gap: 0.75rem;
 }
 
 /* DOWNDROP */
@@ -16,12 +19,19 @@
   background-color: var(--color-background-light);
   width: 150px;
 
-  /* for now */
-  display: none;
+  /* gsap */
+  visibility: hidden;
+  opacity: 0;
 }
 
 .transaction__filter--downdrop > p {
   padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.4s;
+}
+
+.transaction__filter--downdrop > p:hover {
+  background-color: var(--color-background);
 }
 
 .transaction__filter--downdrop > p:not(:last-child) {

@@ -5,10 +5,12 @@ import { useContext } from 'react';
 import TransactionsContext from '../../../context/TransactionsContext';
 
 function TransactionsList() {
-  const { transactions } = useContext(TransactionsContext);
+  const { transactions, isFiltered, updatedTransactions } =
+    useContext(TransactionsContext);
 
-  const transactionsEl = transactions.map((transaction) => (
-    //Still passing the transaction as a prop to use that specific transaction on the LitstItem
+  const cuurentTransactions = isFiltered ? updatedTransactions : transactions;
+
+  const transactionsEl = cuurentTransactions.map((transaction) => (
     <TransactionsListItem key={transaction.id} transaction={transaction} />
   ));
   return <ul className="transactions-list card">{transactionsEl}</ul>;

@@ -33,11 +33,15 @@ const DUMMY_DATA = [
 
 function TransactionsProvider({ children }) {
   const [transactions, setTransactions] = useState(DUMMY_DATA);
-  // console.log(transactions);
+  //creating a copy of the transactions to use when the user filters through transactions
+  const [updatedTransactions, setUpdateTransactions] = useState(transactions);
+  const [isFiltered, setIsFiltered] = useState(false);
+  //sorting List UI
+  const [showSortList, setShowSortList] = useState(false);
 
   //Adds the existing transactions and a new one at the end after every successfull submit
   const onSubmit = (transaction) => {
-    setTransactions(() => [...transactions, transaction]);
+    setTransactions(() => [transaction, ...transactions]);
   };
 
   //Calc all incomes
@@ -64,12 +68,53 @@ function TransactionsProvider({ children }) {
     return totalBalance;
   };
 
+  //Sorting
+  const toggleSortBtn = () => {
+    setShowSortList(() => !showSortList);
+  };
+
+  const sortTransactionsByDate = () => {
+    setIsFiltered(true);
+    //sort items based on the latest transaction
+    const updatedTransactions = transactions.sort(
+      (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+    );
+    setUpdateTransactions(() => updatedTransactions);
+    toggleSortBtn();
+  };
+
+  const sortTransactionsByIncome = () => {
+    setIsFiltered(true);
+    const updatedTransactions = transactions.filter(
+      (transaction) => transaction.type === 'Income'
+    );
+    setUpdateTransactions(() => updatedTransactions);
+    toggleSortBtn();
+  };
+
+  const sortTransactionsByExpense = () => {
+    setIsFiltered(true);
+    const updatedTransactions = transactions.filter(
+      (transaction) => transaction.type === 'Expense'
+    );
+    setUpdateTransactions(() => updatedTransactions);
+    toggleSortBtn();
+  };
+
   const data = {
     transactions,
+    updatedTransactions,
     onSubmit,
     calcTotalAmount,
     calcIncome,
     calcExpenses,
+    sortTransactionsByDate,
+    sortTransactionsByIncome,
+    sortTransactionsByExpense,
+    toggleSortBtn,
+    isFiltered,
+    setIsFiltered,
+    showSortList,
   };
 
   return (

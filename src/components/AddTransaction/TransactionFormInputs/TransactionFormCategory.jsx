@@ -17,7 +17,7 @@ function TransactionFormCategory({
     'Housing',
     'Shopping',
     'Pet',
-    'Subscriptions',
+    'Subscribtions',
     'Health',
     'Travel',
   ];

@@ -21,7 +21,7 @@ const TransactionForm = forwardRef(
     //Format date, to pass as a value on the new Date() obj.
     const today = new Date().toISOString().substring(0, 10);
     //Needed function from the Context
-    const { onSubmit } = useContext(TransactionsContext);
+    const { onSubmit, setIsFiltered } = useContext(TransactionsContext);
     //States
     const [amountError, setAmountError] = useState('');
     const [amount, setAmount] = useState('');
@@ -72,6 +72,7 @@ const TransactionForm = forwardRef(
       setCategory('Category');
       setNote('');
       setDate(today);
+      setIsFiltered(false); //to show original transactions array
     };
 
     return (

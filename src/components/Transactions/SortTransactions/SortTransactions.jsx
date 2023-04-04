@@ -1,15 +1,18 @@
 import './sorttransactions.css';
 import sortIcon from '../../../assets/sort-icon.svg';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useContext } from 'react';
+import TransactionsContext from '../../../context/TransactionsContext';
 import { gsap } from 'gsap';
 
 function SortTransactions() {
-  const [showSortList, setShowSortList] = useState(false);
   const sortListRef = useRef();
-
-  const handleSortBtn = () => {
-    setShowSortList(() => !showSortList);
-  };
+  const {
+    sortTransactionsByDate,
+    sortTransactionsByIncome,
+    sortTransactionsByExpense,
+    toggleSortBtn,
+    showSortList,
+  } = useContext(TransactionsContext);
 
   useEffect(() => {
     if (showSortList) {
@@ -25,15 +28,15 @@ function SortTransactions() {
 
   return (
     <div className="transaction__filter">
-      <div className="transaction__filter--btn" onClick={handleSortBtn}>
+      <div className="transaction__filter--btn" onClick={toggleSortBtn}>
         <p>Sort by</p>
         <img src={sortIcon} alt="" aria-label="sort transactions" />
       </div>
 
       <div className="transaction__filter--downdrop" ref={sortListRef}>
-        <p>Date</p>
-        <p>Income</p>
-        <p>Expenses</p>
+        <p onClick={sortTransactionsByDate}>Latest</p>
+        <p onClick={sortTransactionsByIncome}>Income</p>
+        <p onClick={sortTransactionsByExpense}>Expenses</p>
       </div>
     </div>
   );
